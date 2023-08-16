@@ -159,3 +159,12 @@ select p.Pname as project_name, d.Dname as department_name
 from Project p inner join Departments d
 on p.Dnum = d.Dnum
 order by department_name
+
+/*
+	display all the employees in department 30 whose salary from 1000 to 2000 
+	LE monthly.
+*/
+select *
+from Employee
+where Dno = 30 and (Salary between 1000 and 2000)
+order by Salary

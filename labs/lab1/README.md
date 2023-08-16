@@ -25,6 +25,7 @@
     - [Part-3](#part-3)
         - [Problem 3.1](#problem-31)
         - [Problem 3.2](#problem-32)
+        - [Problem 3.3](#problem-33)
 
 <!-- /TOC -->
 
@@ -228,7 +229,7 @@ on c.PersonID = p.BusinessEntityID
 > Display the Department id, name and SSN and the name of its manager.
 
 ```sql
-select d.Dnum as department_id, d.Dname as department_name, 
+select d.Dnum as department_id, d.Dname as department_name,
 		d.MGRSSN as manager_ssn, CONCAT(e.Fname, ' ', e.Lname) as manager_fullname
 from Departments d inner join Employee e
 on d.MGRSSN = e.SSN
@@ -245,6 +246,19 @@ select p.Pname as project_name, d.Dname as department_name
 from Project p inner join Departments d
 on p.Dnum = d.Dnum
 order by department_name
+```
+
+**_[&uarr; top](#table-of-content)_**
+
+### Problem 3.3
+
+> display all the employees in department 30 whose salary from 1000 to 2000 LE monthly.
+
+```sql
+select *
+from Employee
+where Dno = 30 and (Salary between 1000 and 2000)
+order by Salary
 ```
 
 **_[&uarr; top](#table-of-content)_**

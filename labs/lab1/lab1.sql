@@ -214,3 +214,6 @@ on p.Dnum = d.Dnum
 inner join Employee e
 on d.MGRSSN = e.SSN
 where p.City = 'Cairo'
+
+/*
+  Display All Data of the mangers*/select e.*from Departments d inner join Employee eon d.MGRSSN = e.SSN

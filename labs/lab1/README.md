@@ -30,6 +30,7 @@
         - [Problem 3.5](#problem-35)
         - [Problem 3.6](#problem-36)
         - [Problem 3.7](#problem-37)
+        - [Problem 3.8](#problem-38)
 
 <!-- /TOC -->
 
@@ -324,6 +325,18 @@ on p.Dnum = d.Dnum
 inner join Employee e
 on d.MGRSSN = e.SSN
 where p.City = 'Cairo'
+```
+
+**_[&uarr; top](#table-of-content)_**
+
+### Problem 3.8
+
+> Display All Data of the mangers
+
+```sql
+select e.*
+from Departments d inner join Employee e
+on d.MGRSSN = e.SSN
 ```
 
 **_[&uarr; top](#table-of-content)_**

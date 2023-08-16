@@ -73,3 +73,14 @@ from Instructor
 where Salary < (
 	select avg(Salary) from Instructor
 )
+
+/*
+	 Display the Department name that contains the instructor who receives the 
+	 minimum salary.
+*/
+select d.Dept_Name as department_name
+from Department d inner join(select top(1) with ties *
+from Instructor
+order by Salary) as nw
+on d.Dept_Id = nw.Dept_Id
+order by d.Dept_Id

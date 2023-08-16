@@ -32,6 +32,7 @@
         - [Problem 3.7](#problem-37)
         - [Problem 3.8](#problem-38)
         - [Problem 3.9](#problem-39)
+        - [Bouns](#bouns)
 
 <!-- /TOC -->
 
@@ -350,6 +351,20 @@ on d.MGRSSN = e.SSN
 select e.*, d.*
 from Employee e left join Dependent d
 on e.SSN = d.ESSN
+```
+
+**_[&uarr; top](#table-of-content)_**
+
+### Bouns
+
+> _@@_ prefix is used to denote global system variables
+
+```sql
+/*
+	Display results of the following two statements
+*/
+select @@VERSION
+select @@SERVERNAME
 ```
 
 **_[&uarr; top](#table-of-content)_**

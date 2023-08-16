@@ -11,6 +11,7 @@
     - [Part-1](#part-1)
         - [Problem 1.1](#problem-11)
         - [Problem 1.2](#problem-12)
+        - [Problem 1.3](#problem-13)
 
 <!-- /TOC -->
 
@@ -39,6 +40,17 @@ on  s.St_Id = sc.St_Id
 inner join Course c
 on sc.Crs_Id = c.Crs_Id
 where sc.Grade is not null
+```
+
+### Problem 1.3
+
+> Display number of courses for each topic name
+
+```sql
+select t.Top_Name as topic_name, count(c.Crs_Id) as num_of_courses
+from Topic t left join  Course c
+on t.Top_Id = c.Top_Id
+group by t.Top_Name
 ```
 
 **_[&uarr; top](#table-of-content)_**

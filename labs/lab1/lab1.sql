@@ -127,3 +127,11 @@ where Color in ('Silver', 'Black', 'Red')
 select *
 from Production.Product
 where Name like 'B%'
+
+/*
+	Transfer the rowguid ,FirstName, SalesPerson from Customer table in a 
+	newly created table named [customer_Archive] updated
+*/
+select c.rowguid, p.FirstName into customer_Archive
+from Sales.Customer c inner join Person.Person p
+on c.PersonID = p.BusinessEntityID

@@ -29,6 +29,8 @@ This is the ITI-Database-Labs repository. It's here for me to store my solutions
 
 **4. Your Turn to Shine:** Feel free to dive into the SQL, reuse it, or give it your twist. The best way to learn is by doing!
 
+> **Note:** Additionally, remember to access the **database backup** files from the "**_[backups.zip](./backups.zip)_**"  archive. These backups can be a great starting point for exploring and experimenting with the lab scenarios.
+
 **_[&uarr; top](#table-of-content)_**
 
 ## Sharing and Learning

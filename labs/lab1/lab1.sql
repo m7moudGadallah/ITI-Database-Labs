@@ -84,3 +84,18 @@ from Instructor
 order by Salary) as nw
 on d.Dept_Id = nw.Dept_Id
 order by d.Dept_Id
+
+/*--------------------------------((Part2))----------------------------------*/
+use master
+go
+
+use AdventureWorks2012
+go
+
+/*
+ Display the SalesOrderID, ShipDate of the SalesOrderHearder table (Sales schema)
+ to designate SalesOrders that occurred within the period ‘7/28/2008’ and ‘7/29/2014’
+*/
+select SalesOrderID, ShipDate
+from sales.SalesOrderHeader
+where OrderDate between '7/28/2008' and '7/29/2014'

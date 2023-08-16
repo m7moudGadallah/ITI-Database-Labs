@@ -168,3 +168,14 @@ select *
 from Employee
 where Dno = 30 and (Salary between 1000 and 2000)
 order by Salary
+
+/*
+	Retrieve the names of all employees in department 10 
+	who works more than or equal 10 hours per week on "AL Rabwah" project.
+*/
+select CONCAT(e.Fname, ' ', e.Lname) as employee_fullname
+from Employee e inner join Works_for w
+on e.SSN = w.ESSn
+inner join Project p
+on w.Pno = p.Pnumber
+where e.Dno = 10 and w.Hours >= 10 and p.Pname = 'AL Rabwah'

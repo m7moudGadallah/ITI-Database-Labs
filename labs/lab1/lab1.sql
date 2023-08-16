@@ -179,3 +179,15 @@ on e.SSN = w.ESSn
 inner join Project p
 on w.Pno = p.Pnumber
 where e.Dno = 10 and w.Hours >= 10 and p.Pname = 'AL Rabwah'
+
+/*
+	Find the names of the employees who directly supervised
+	with Kamel Mohamed.
+*/
+select CONCAT(Fname, ' ', Lname) as employee_fullname
+from Employee
+where Superssn = (
+	select SSN
+	from Employee
+	where CONCAT(Fname, ' ', Lname) = 'Kamel Mohamed'
+)

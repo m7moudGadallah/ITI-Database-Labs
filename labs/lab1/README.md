@@ -7,26 +7,27 @@
 <!-- TOC -->
 
 - [Lab1](#lab1)
-    - [Table of Content](#table-of-content)
-    - [Part-1](#part-1)
-        - [Problem 1.1](#problem-11)
-        - [Problem 1.2](#problem-12)
-        - [Problem 1.3](#problem-13)
-        - [Problem 1.4](#problem-14)
-        - [Problem 1.5](#problem-15)
-        - [Problem 1.6](#problem-16)
-    - [Part-2](#part-2)
-        - [Problem 2.1](#problem-21)
-        - [Problem 2.2](#problem-22)
-        - [Problem 2.3](#problem-23)
-        - [Problem 2.4](#problem-24)
-        - [Problem 2.5](#problem-25)
-        - [Problem 2.6](#problem-26)
-    - [Part-3](#part-3)
-        - [Problem 3.1](#problem-31)
-        - [Problem 3.2](#problem-32)
-        - [Problem 3.3](#problem-33)
-        - [Problem 3.4](#problem-34)
+  - [Table of Content](#table-of-content)
+  - [Part-1](#part-1)
+    - [Problem 1.1](#problem-11)
+    - [Problem 1.2](#problem-12)
+    - [Problem 1.3](#problem-13)
+    - [Problem 1.4](#problem-14)
+    - [Problem 1.5](#problem-15)
+    - [Problem 1.6](#problem-16)
+  - [Part-2](#part-2)
+    - [Problem 2.1](#problem-21)
+    - [Problem 2.2](#problem-22)
+    - [Problem 2.3](#problem-23)
+    - [Problem 2.4](#problem-24)
+    - [Problem 2.5](#problem-25)
+    - [Problem 2.6](#problem-26)
+  - [Part-3](#part-3)
+    - [Problem 3.1](#problem-31)
+    - [Problem 3.2](#problem-32)
+    - [Problem 3.3](#problem-33)
+    - [Problem 3.4](#problem-34)
+    - [Problem 3.5](#problem-35)
 
 <!-- /TOC -->
 
@@ -275,6 +276,22 @@ on e.SSN = w.ESSn
 inner join Project p
 on w.Pno = p.Pnumber
 where e.Dno = 10 and w.Hours >= 10 and p.Pname = 'AL Rabwah'
+```
+
+**_[&uarr; top](#table-of-content)_**
+
+### Problem 3.5
+
+> Find the names of the employees who directly supervised with Kamel Mohamed.
+
+```sql
+select CONCAT(Fname, ' ', Lname) as employee_fullname
+from Employee
+where Superssn = (
+	select SSN
+	from Employee
+	where CONCAT(Fname, ' ', Lname) = 'Kamel Mohamed'
+)
 ```
 
 **_[&uarr; top](#table-of-content)_**

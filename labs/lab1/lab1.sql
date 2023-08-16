@@ -200,3 +200,17 @@ select CONCAT(e.Fname, ' ', e.Lname) as employee_fullname, p.Pname project_name
 from Employee e, Works_for w, Project p
 where e.SSN = w.ESSn and w.Pno = p.Pnumber
 order by project_name
+
+/*
+	For each project located in Cairo City , find the project number, the 
+	controlling department name ,the department manager last name ,address 
+	and birthdate
+*/
+select p.Pname as project_name, p.Pnumber as project_number,
+		d.Dname as department_name, e.Lname as department_manager_lastname,
+		e.Address as manager_address, e.Bdate as manager_birthdate
+from Project p inner join Departments d
+on p.Dnum = d.Dnum
+inner join Employee e
+on d.MGRSSN = e.SSN
+where p.City = 'Cairo'

@@ -29,6 +29,7 @@
         - [Problem 3.4](#problem-34)
         - [Problem 3.5](#problem-35)
         - [Problem 3.6](#problem-36)
+        - [Problem 3.7](#problem-37)
 
 <!-- /TOC -->
 
@@ -306,6 +307,23 @@ select CONCAT(e.Fname, ' ', e.Lname) as employee_fullname, p.Pname project_name
 from Employee e, Works_for w, Project p
 where e.SSN = w.ESSn and w.Pno = p.Pnumber
 order by project_name
+```
+
+**_[&uarr; top](#table-of-content)_**
+
+### Problem 3.7
+
+> For each project located in Cairo City , find the project number, the controlling department name ,the department manager last name ,address and birthdate
+
+```sql
+select p.Pname as project_name, p.Pnumber as project_number,
+		d.Dname as department_name, e.Lname as department_manager_lastname,
+		e.Address as manager_address, e.Bdate as manager_birthdate
+from Project p inner join Departments d
+on p.Dnum = d.Dnum
+inner join Employee e
+on d.MGRSSN = e.SSN
+where p.City = 'Cairo'
 ```
 
 **_[&uarr; top](#table-of-content)_**

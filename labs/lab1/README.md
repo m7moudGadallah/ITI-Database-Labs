@@ -24,6 +24,7 @@
         - [Problem 2.6](#problem-26)
     - [Part-3](#part-3)
         - [Problem 3.1](#problem-31)
+        - [Problem 3.2](#problem-32)
 
 <!-- /TOC -->
 
@@ -231,6 +232,19 @@ select d.Dnum as department_id, d.Dname as department_name,
 		d.MGRSSN as manager_ssn, CONCAT(e.Fname, ' ', e.Lname) as manager_fullname
 from Departments d inner join Employee e
 on d.MGRSSN = e.SSN
+```
+
+**_[&uarr; top](#table-of-content)_**
+
+### Problem 3.2
+
+> Display the name of the departments and the name of the projects under its control.
+
+```sql
+select p.Pname as project_name, d.Dname as department_name
+from Project p inner join Departments d
+on p.Dnum = d.Dnum
+order by department_name
 ```
 
 **_[&uarr; top](#table-of-content)_**

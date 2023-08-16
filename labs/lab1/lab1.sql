@@ -150,3 +150,12 @@ select d.Dnum as department_id, d.Dname as department_name,
 		d.MGRSSN as manager_ssn, CONCAT(e.Fname, ' ', e.Lname) as manager_fullname
 from Departments d inner join Employee e
 on d.MGRSSN = e.SSN
+
+/*
+	Display the name of the departments and the name of the projects under 
+	its control.
+*/
+select p.Pname as project_name, d.Dname as department_name
+from Project p inner join Departments d
+on p.Dnum = d.Dnum
+order by department_name

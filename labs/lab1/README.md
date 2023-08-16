@@ -7,27 +7,28 @@
 <!-- TOC -->
 
 - [Lab1](#lab1)
-  - [Table of Content](#table-of-content)
-  - [Part-1](#part-1)
-    - [Problem 1.1](#problem-11)
-    - [Problem 1.2](#problem-12)
-    - [Problem 1.3](#problem-13)
-    - [Problem 1.4](#problem-14)
-    - [Problem 1.5](#problem-15)
-    - [Problem 1.6](#problem-16)
-  - [Part-2](#part-2)
-    - [Problem 2.1](#problem-21)
-    - [Problem 2.2](#problem-22)
-    - [Problem 2.3](#problem-23)
-    - [Problem 2.4](#problem-24)
-    - [Problem 2.5](#problem-25)
-    - [Problem 2.6](#problem-26)
-  - [Part-3](#part-3)
-    - [Problem 3.1](#problem-31)
-    - [Problem 3.2](#problem-32)
-    - [Problem 3.3](#problem-33)
-    - [Problem 3.4](#problem-34)
-    - [Problem 3.5](#problem-35)
+    - [Table of Content](#table-of-content)
+    - [Part-1](#part-1)
+        - [Problem 1.1](#problem-11)
+        - [Problem 1.2](#problem-12)
+        - [Problem 1.3](#problem-13)
+        - [Problem 1.4](#problem-14)
+        - [Problem 1.5](#problem-15)
+        - [Problem 1.6](#problem-16)
+    - [Part-2](#part-2)
+        - [Problem 2.1](#problem-21)
+        - [Problem 2.2](#problem-22)
+        - [Problem 2.3](#problem-23)
+        - [Problem 2.4](#problem-24)
+        - [Problem 2.5](#problem-25)
+        - [Problem 2.6](#problem-26)
+    - [Part-3](#part-3)
+        - [Problem 3.1](#problem-31)
+        - [Problem 3.2](#problem-32)
+        - [Problem 3.3](#problem-33)
+        - [Problem 3.4](#problem-34)
+        - [Problem 3.5](#problem-35)
+        - [Problem 3.6](#problem-36)
 
 <!-- /TOC -->
 
@@ -292,6 +293,19 @@ where Superssn = (
 	from Employee
 	where CONCAT(Fname, ' ', Lname) = 'Kamel Mohamed'
 )
+```
+
+**_[&uarr; top](#table-of-content)_**
+
+### Problem 3.6
+
+> Retrieve the names of all employees and the names of the projects they are working on, sorted by the project name.
+
+```sql
+select CONCAT(e.Fname, ' ', e.Lname) as employee_fullname, p.Pname project_name
+from Employee e, Works_for w, Project p
+where e.SSN = w.ESSn and w.Pno = p.Pnumber
+order by project_name
 ```
 
 **_[&uarr; top](#table-of-content)_**

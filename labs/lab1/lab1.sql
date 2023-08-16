@@ -191,3 +191,12 @@ where Superssn = (
 	from Employee
 	where CONCAT(Fname, ' ', Lname) = 'Kamel Mohamed'
 )
+
+/*
+	Retrieve the names of all employees and the names of the projects
+	they are working on, sorted by the project name.
+*/
+select CONCAT(e.Fname, ' ', e.Lname) as employee_fullname, p.Pname project_name
+from Employee e, Works_for w, Project p
+where e.SSN = w.ESSn and w.Pno = p.Pnumber
+order by project_name

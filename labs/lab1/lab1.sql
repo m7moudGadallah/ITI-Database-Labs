@@ -137,3 +137,16 @@ from Sales.Customer c inner join Person.Person p
 on c.PersonID = p.BusinessEntityID
 
 /*--------------------------------((Part3))----------------------------------*/
+use master
+go
+
+use Company_SD
+go
+
+/*
+	Display the Department id, name and SSN and the name of its manager.
+*/
+select d.Dnum as department_id, d.Dname as department_name, 
+		d.MGRSSN as manager_ssn, CONCAT(e.Fname, ' ', e.Lname) as manager_fullname
+from Departments d inner join Employee e
+on d.MGRSSN = e.SSN

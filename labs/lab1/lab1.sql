@@ -120,3 +120,10 @@ where Weight is null
 select *
 from Production.Product
 where Color in ('Silver', 'Black', 'Red')
+
+/*
+	Display any Product with a Name starting with the letter B
+*/
+select *
+from Production.Product
+where Name like 'B%'

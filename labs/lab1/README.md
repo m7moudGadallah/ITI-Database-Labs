@@ -20,6 +20,7 @@
         - [Problem 2.2](#problem-22)
         - [Problem 2.3](#problem-23)
         - [Problem 2.4](#problem-24)
+        - [Problem 2.5](#problem-25)
 
 <!-- /TOC -->
 
@@ -182,6 +183,18 @@ where Weight is null
 select *
 from Production.Product
 where Color in ('Silver', 'Black', 'Red')
+```
+
+**_[&uarr; top](#table-of-content)_**
+
+### Problem 2.5
+
+> Display any Product with a Name starting with the letter B
+
+```sql
+select *
+from Production.Product
+where Name like 'B%'
 ```
 
 **_[&uarr; top](#table-of-content)_**

@@ -138,7 +138,7 @@ order by d.Dept_Id
 
 ## Part-2
 
-> Use ITI DB
+> Use AdventureWorks DB
 
 ### Problem 2.1
 

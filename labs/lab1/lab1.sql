@@ -135,3 +135,5 @@ where Name like 'B%'
 select c.rowguid, p.FirstName into customer_Archive
 from Sales.Customer c inner join Person.Person p
 on c.PersonID = p.BusinessEntityID
+
+/*--------------------------------((Part3))----------------------------------*/

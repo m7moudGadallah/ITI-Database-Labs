@@ -63,3 +63,13 @@ select * from Instructor
 */
 select min(Salary) as min_salary, max(Salary) as max_salary
 from Instructor
+
+/*
+	Display instructors who have salaries less than the average salary of all 
+	instructors.
+*/
+select *
+from Instructor
+where Salary < (
+	select avg(Salary) from Instructor
+)

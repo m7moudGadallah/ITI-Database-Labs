@@ -113,3 +113,10 @@ where StandardCost < 110.00
 select ProductID, Name
 from Production.Product
 where Weight is null
+
+/*
+	Display all Products with a Silver, Black, or Red Color
+*/
+select *
+from Production.Product
+where Color in ('Silver', 'Black', 'Red')

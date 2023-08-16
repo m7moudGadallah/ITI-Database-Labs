@@ -19,6 +19,7 @@
         - [Problem 2.1](#problem-21)
         - [Problem 2.2](#problem-22)
         - [Problem 2.3](#problem-23)
+        - [Problem 2.4](#problem-24)
 
 <!-- /TOC -->
 
@@ -169,6 +170,18 @@ where StandardCost < 110.00
 select ProductID, Name
 from Production.Product
 where Weight is null
+```
+
+**_[&uarr; top](#table-of-content)_**
+
+### Problem 2.4
+
+> Display all Products with a Silver, Black, or Red Color
+
+```sql
+select *
+from Production.Product
+where Color in ('Silver', 'Black', 'Red')
 ```
 
 **_[&uarr; top](#table-of-content)_**

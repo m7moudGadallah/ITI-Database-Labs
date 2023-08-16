@@ -216,4 +216,5 @@ on d.MGRSSN = e.SSN
 where p.City = 'Cairo'
 
 /*
-  Display All Data of the mangers*/select e.*from Departments d inner join Employee eon d.MGRSSN = e.SSN
+  Display All Data of the mangers*/select e.*from Departments d inner join Employee eon d.MGRSSN = e.SSN/*	Display All Employees data and the data of their dependents even
+	if they have no dependents*/select e.*, d.*from Employee e left join Dependent don e.SSN = d.ESSN

@@ -31,6 +31,7 @@
         - [Problem 3.6](#problem-36)
         - [Problem 3.7](#problem-37)
         - [Problem 3.8](#problem-38)
+        - [Problem 3.9](#problem-39)
 
 <!-- /TOC -->
 
@@ -337,6 +338,18 @@ where p.City = 'Cairo'
 select e.*
 from Departments d inner join Employee e
 on d.MGRSSN = e.SSN
+```
+
+**_[&uarr; top](#table-of-content)_**
+
+### Problem 3.9
+
+> Display All Employees data and the data of their dependents even if they have no dependents
+
+```sql
+select e.*, d.*
+from Employee e left join Dependent d
+on e.SSN = d.ESSN
 ```
 
 **_[&uarr; top](#table-of-content)_**

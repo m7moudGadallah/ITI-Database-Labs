@@ -7,11 +7,12 @@
 <!-- TOC -->
 
 - [Lab1](#lab1)
-    - [Table of Content](#table-of-content)
-    - [Part-1](#part-1)
-        - [Problem 1.1](#problem-11)
-        - [Problem 1.2](#problem-12)
-        - [Problem 1.3](#problem-13)
+  - [Table of Content](#table-of-content)
+  - [Part-1](#part-1)
+    - [Problem 1.1](#problem-11)
+    - [Problem 1.2](#problem-12)
+    - [Problem 1.3](#problem-13)
+    - [Problem 1.3](#problem-13)
 
 <!-- /TOC -->
 
@@ -51,6 +52,40 @@ select t.Top_Name as topic_name, count(c.Crs_Id) as num_of_courses
 from Topic t left join  Course c
 on t.Top_Id = c.Top_Id
 group by t.Top_Name
+```
+
+### Problem 1.3
+
+> Display max and min salary for instructors
+
+```sql
+select min(Salary) as min_salary, max(Salary) as max_salary
+from Instructor
+```
+
+**_💡Note_**:
+All Salaries is null so output will be (null, null) so I filled table with this query
+
+```sql
+/*
+	fill salaries
+*/
+with tmp_instructor as(
+	select *, NTILE(5) over(partition by dept_id order by Ins_id) as nt
+	from Instructor where Salary is null
+)
+
+--select * from tmp_instructor
+
+update tmp_instructor
+	set salary =
+		case
+			when nt = 1 then 2500
+			when nt = 2 then 4000
+			when nt = 3 then 6000
+			when nt = 4 then 7000
+			else 10000
+		end
 ```
 
 **_[&uarr; top](#table-of-content)_**

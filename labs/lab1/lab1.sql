@@ -99,3 +99,10 @@ go
 select SalesOrderID, ShipDate
 from sales.SalesOrderHeader
 where OrderDate between '7/28/2008' and '7/29/2014'
+
+/*
+	Display only Products with a StandardCost below $110.00 (show ProductID, Name only)
+*/
+select ProductID, Name
+from Production.Product
+where StandardCost < 110.00

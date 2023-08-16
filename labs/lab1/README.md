@@ -7,16 +7,17 @@
 <!-- TOC -->
 
 - [Lab1](#lab1)
-  - [Table of Content](#table-of-content)
-  - [Part-1](#part-1)
-    - [Problem 1.1](#problem-11)
-    - [Problem 1.2](#problem-12)
-    - [Problem 1.3](#problem-13)
-    - [Problem 1.4](#problem-14)
-    - [Problem 1.5](#problem-15)
-    - [Problem 1.6](#problem-16)
-  - [Part-2](#part-2)
-    - [Problem 2.1](#problem-21)
+    - [Table of Content](#table-of-content)
+    - [Part-1](#part-1)
+        - [Problem 1.1](#problem-11)
+        - [Problem 1.2](#problem-12)
+        - [Problem 1.3](#problem-13)
+        - [Problem 1.4](#problem-14)
+        - [Problem 1.5](#problem-15)
+        - [Problem 1.6](#problem-16)
+    - [Part-2](#part-2)
+        - [Problem 2.1](#problem-21)
+        - [Problem 2.2](#problem-22)
 
 <!-- /TOC -->
 
@@ -143,6 +144,18 @@ order by d.Dept_Id
 select SalesOrderID, ShipDate
 from sales.SalesOrderHeader
 where OrderDate between '7/28/2008' and '7/29/2014'
+```
+
+**_[&uarr; top](#table-of-content)_**
+
+### Problem 2.2
+
+> Display only Products with a StandardCost below $110.00 (show ProductID, Name only)
+
+```sql
+select ProductID, Name
+from Production.Product
+where StandardCost < 110.00
 ```
 
 **_[&uarr; top](#table-of-content)_**

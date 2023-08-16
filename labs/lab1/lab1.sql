@@ -106,3 +106,10 @@ where OrderDate between '7/28/2008' and '7/29/2014'
 select ProductID, Name
 from Production.Product
 where StandardCost < 110.00
+
+/*
+	Display ProductID, Name if its weight is unknown
+*/
+select ProductID, Name
+from Production.Product
+where Weight is null

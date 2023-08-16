@@ -18,6 +18,7 @@
     - [Part-2](#part-2)
         - [Problem 2.1](#problem-21)
         - [Problem 2.2](#problem-22)
+        - [Problem 2.3](#problem-23)
 
 <!-- /TOC -->
 
@@ -156,6 +157,18 @@ where OrderDate between '7/28/2008' and '7/29/2014'
 select ProductID, Name
 from Production.Product
 where StandardCost < 110.00
+```
+
+**_[&uarr; top](#table-of-content)_**
+
+### Problem 2.3
+
+> Display ProductID, Name if its weight is unknown
+
+```sql
+select ProductID, Name
+from Production.Product
+where Weight is null
 ```
 
 **_[&uarr; top](#table-of-content)_**

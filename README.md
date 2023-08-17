@@ -23,13 +23,13 @@ This is the ITI-Database-Labs repository. It's here for me to store my solutions
 
 **1. Accessing the Solutions:** Just hit the "Code" button and download everything I've got here, including the database backups.
 
-**2. Lab-Specific Folders:** Each lab has its own folder. That's where you'll find the SQL code I've used and the corresponding database backup file.
+**2. Lab-Specific Folders:** Each lab **_[here](./labs/)_** has its own folder. That's where you'll find the SQL code I've used and the corresponding database backup file.
 
 **3. Exploring the Solutions:** Open a lab folder, and you'll see a README explaining the lab's purpose. There's also the SQL script I wrote to solve the lab.
 
 **4. Your Turn to Shine:** Feel free to dive into the SQL, reuse it, or give it your twist. The best way to learn is by doing!
 
-> **Note:** Additionally, remember to access the **database backup** files from the "**_[backups.zip](./backups.zip)_**"  archive. These backups can be a great starting point for exploring and experimenting with the lab scenarios.
+> **Note:** Additionally, remember to access the **database backup** files from the "**_[backups.zip](./backups.zip)_**" archive. These backups can be a great starting point for exploring and experimenting with the lab scenarios.
 
 **_[&uarr; top](#table-of-content)_**
 

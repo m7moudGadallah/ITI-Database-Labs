@@ -26,3 +26,28 @@ from Project
 
 select * into Human_Resource.Employee
 from Employee
+
+
+/*---------------------------------((Part1))---------------------------------*/
+use master
+go
+
+use ITI
+go
+
+/*
+	Create a view that displays student full name, course name if 
+	the student has a grade more than 50.
+*/
+create view StudentsWithGradesOver50View as
+select CONCAT(s.St_Fname, ' ', s.St_Lname) StudentName,
+	c.Crs_Name as CourseName
+from Student s
+inner join Stud_Course sc
+on s.St_Id = sc.St_Id
+inner join Course c
+on sc.Crs_Id = c.Crs_Id
+where sc.Grade > 50;
+
+select *
+from StudentsWithGradesOver50View;

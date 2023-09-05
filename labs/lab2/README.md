@@ -7,8 +7,10 @@
 <!-- TOC -->
 
 - [Lab2](#lab2)
-  - [Table of Content](#table-of-content)
-  - [Part-0](#part-0)
+    - [Table of Content](#table-of-content)
+    - [Part-0](#part-0)
+    - [Part-1](#part-1)
+        - [Problme 1.1](#problme-11)
 
 <!-- /TOC -->
 
@@ -48,3 +50,26 @@ from Employee
 ```
 
 **_[&uarr; top](#table-of-content)_**
+
+## Part-1
+
+> Use ITI DB
+
+### Problme 1.1
+
+> Create a view that displays student full name, course name if the student has a grade more than 50
+
+```sql
+create view StudentsWithGradesOver50View as
+select CONCAT(s.St_Fname, ' ', s.St_Lname) StudentName,
+	c.Crs_Name as CourseName
+from Student s
+inner join Stud_Course sc
+on s.St_Id = sc.St_Id
+inner join Course c
+on sc.Crs_Id = c.Crs_Id
+where sc.Grade > 50;
+
+select *
+from StudentsWithGradesOver50View;
+```

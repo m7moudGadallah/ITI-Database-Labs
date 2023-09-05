@@ -103,3 +103,11 @@ with check option;
 
 select *
 from V1;
+
+/*
+	Create temporary table [Session based]
+*/
+create table #SessionTempTable(
+	Id int identity(1, 1),
+	UserName varchar(30),
+);

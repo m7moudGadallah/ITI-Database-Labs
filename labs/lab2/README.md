@@ -14,6 +14,7 @@
         - [Problme 1.2](#problme-12)
         - [Problme 1.3](#problme-13)
         - [Problme 1.4](#problme-14)
+        - [Problme 1.5](#problme-15)
 
 <!-- /TOC -->
 
@@ -136,6 +137,19 @@ where St_Address in ('Cairo', 'Alex');
 
 select *
 from V1;
+```
+
+**_[&uarr; top](#table-of-content)_**
+
+### Problme 1.5
+
+> Create temporary table [Session based]
+
+```sql
+create table #SessionTempTable(
+	Id int identity(1, 1),
+	UserName varchar(30),
+);
 ```
 
 **_[&uarr; top](#table-of-content)_**

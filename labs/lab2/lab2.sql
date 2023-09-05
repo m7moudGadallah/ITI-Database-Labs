@@ -111,3 +111,14 @@ create table #SessionTempTable(
 	Id int identity(1, 1),
 	UserName varchar(30),
 );
+
+/*
+	Create temporary table [Session based] on Company DB 
+	to save employee name and his today task.
+*/
+use Company_SD;
+go
+create table Company_SD.#EmployeeTasks(
+	EmployeeName varchar(50),
+	TodaysTask varchar(50)
+);

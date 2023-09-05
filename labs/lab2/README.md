@@ -15,6 +15,7 @@
         - [Problme 1.3](#problme-13)
         - [Problme 1.4](#problme-14)
         - [Problme 1.5](#problme-15)
+        - [Problme 1.6](#problme-16)
 
 <!-- /TOC -->
 
@@ -150,6 +151,20 @@ create table #SessionTempTable(
 	Id int identity(1, 1),
 	UserName varchar(30),
 );
+```
+
+**_[&uarr; top](#table-of-content)_**
+
+### Problme 1.6
+
+> Create temporary table [Session based] on Company DB to save employee name and his today task.
+
+```sql
+create table Company_SD.#EmployeeTasks(
+	EmployeeName varchar(50),
+	TodaysTask varchar(50)
+);
+
 ```
 
 **_[&uarr; top](#table-of-content)_**

@@ -72,3 +72,19 @@ on c.Top_Id = t.Top_Id;
 
 select *
 from MangerTopicsView;
+
+/*
+	Create a view that will display Instructor Name, Department Name for the ‘SD’ 
+	or ‘Java’ Department “use Schema binding” 
+	and describe what is the meaning of Schema Binding
+*/
+create view InstructorDepartmnetsView with schemabinding as
+select i.Ins_Name as InstructorName,
+	d.Dept_Name as DepartmentName
+from dbo.Instructor i
+inner join dbo.Department d
+on i.Dept_Id = d.Dept_Id
+where d.Dept_Name in ('SD', 'Java');
+
+select *
+from InstructorDepartmnetsView;

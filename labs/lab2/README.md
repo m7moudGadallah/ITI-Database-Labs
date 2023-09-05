@@ -12,6 +12,7 @@
     - [Part-1](#part-1)
         - [Problme 1.1](#problme-11)
         - [Problme 1.2](#problme-12)
+        - [Problme 1.3](#problme-13)
 
 <!-- /TOC -->
 
@@ -98,5 +99,26 @@ on c.Top_Id = t.Top_Id;
 select *
 from MangerTopicsView;
 ```
+
+**_[&uarr; top](#table-of-content)_**
+
+### Problme 1.3
+
+> Create a view that will display Instructor Name, Department Name for the ‘SD’ or ‘Java’ Department “use Schema binding” and describe what is the meaning of Schema Binding
+
+```sql
+create view InstructorDepartmnetsView with schemabinding as
+select i.Ins_Name as InstructorName,
+	d.Dept_Name as DepartmentName
+from dbo.Instructor i
+inner join dbo.Department d
+on i.Dept_Id = d.Dept_Id
+where d.Dept_Name in ('SD', 'Java');
+
+select *
+from InstructorDepartmnetsView;
+```
+
+> **Schema Binding**: is used to protect the data in a view. If a view is schema-bound, it can only be accessed by users who have the appropriate permissions to the schema in which the view is created.
 
 **_[&uarr; top](#table-of-content)_**

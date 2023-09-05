@@ -13,6 +13,7 @@
         - [Problme 1.1](#problme-11)
         - [Problme 1.2](#problme-12)
         - [Problme 1.3](#problme-13)
+        - [Problme 1.4](#problme-14)
 
 <!-- /TOC -->
 
@@ -120,5 +121,21 @@ from InstructorDepartmnetsView;
 ```
 
 > **Schema Binding**: is used to protect the data in a view. If a view is schema-bound, it can only be accessed by users who have the appropriate permissions to the schema in which the view is created.
+
+**_[&uarr; top](#table-of-content)_**
+
+### Problme 1.4
+
+> Create a view “V1” that displays student data for student who lives in Alex or Cairo. **Note:** Prevent the users to run the following query Update V1 set st_address=’tanta’ Where st_address=’alex’.
+
+```sql
+create view V1 as
+select *
+from Student
+where St_Address in ('Cairo', 'Alex');
+
+select *
+from V1;
+```
 
 **_[&uarr; top](#table-of-content)_**

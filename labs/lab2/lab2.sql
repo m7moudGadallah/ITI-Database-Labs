@@ -88,3 +88,18 @@ where d.Dept_Name in ('SD', 'Java');
 
 select *
 from InstructorDepartmnetsView;
+
+/*
+	Create a view “V1” that displays student data 
+	for student who lives in Alex or Cairo.
+	Note: Prevent the users to run the following query 
+	Update V1 set st_address=’tanta’ Where st_address=’alex’.
+*/
+create view V1 as
+select *
+from Student
+where St_Address in ('Cairo', 'Alex')
+with check option;
+
+select *
+from V1;

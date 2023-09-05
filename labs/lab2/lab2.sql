@@ -51,3 +51,24 @@ where sc.Grade > 50;
 
 select *
 from StudentsWithGradesOver50View;
+go
+
+/*
+	Create an Encrypted view that displays manager names and 
+	the topics they teach.
+*/
+create view MangerTopicsView with encryption as
+select i.Ins_Name as ManagerName,
+	t.Top_Name TopicName
+from Department d
+inner join Instructor i
+on d.Dept_Manager = i.Ins_Id
+inner join Ins_Course ic
+on i.Ins_Id = ic.Ins_Id
+inner join Course c
+on ic.Crs_Id = c.Crs_Id
+inner join Topic t
+on c.Top_Id = t.Top_Id;
+
+select *
+from MangerTopicsView;
